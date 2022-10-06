@@ -8,6 +8,8 @@ public class healthdisplay : MonoBehaviour
 {
     public TMP_Text health;
     public TMP_Text enemyhealth;
+    public TMP_Text herbs;
+
 
     public int enemyhealthmax = 10;
     public int enemyhealthcurrent = 10;
@@ -21,8 +23,9 @@ public class healthdisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health.text = GameManager.currenthealth + "/" + GameManager.maxhealth;
+        health.text = GameManager.currenthealth + "/" + GameManager.maxhealth + "   " + GameManager.currentstamina + "/" + GameManager.maxstamina + "\nHealth   Stamina";
         enemyhealth.text = enemyhealthcurrent + "/" + enemyhealthmax;
+        herbs.text = "Green herbs: "+ GameManager.greenherb + " Blue herbs: " + GameManager.blueherb + " Red herbs: " + GameManager.redherb;
 
     }
 }
