@@ -1,0 +1,34 @@
+Thank you kindly for purchasing this resource pack! We do hope that it serves you well.
+
+=========Notes about the Tilesets========
+These tiles, particularly the Auto-tile sheets (A1-A4), were created with RPG Maker VX and VX Ace in mind. To get the most out of these Auto-tile sheets using the aformentioned RPG Maker products, shift-tiling is required. This is accomplished by holding down the shift-button and then clicking where you would like to place the tile in question. What this does it place the tile without the auto-tile taking over. This is primarily used for removing odd edges and boundaries around certain tiles.
+
+=========Notes about the bonus Script=========
+This script was written by two people, one who wishes to remain anonymous, and Tsukihime, and credit is required to him if you use this script.
+
+This script will ONLY WORK IN RPGMAKER VX ACE. It will not work in any other RPG Maker product.
+
+As with all of the resources contained in this bundle, the script can be used in commercial projects.
+
+What this script does:
+It helps alleviate a problem with larger character events. By default, any character over 32 pixels high would get cut off by any tile designated as being above the player (* in the editor). This script helps by making the character event not get cut off when lower on the Y axis on the screen. Further, if a character event or the player moves behind a large tile designated with a * in the editor, they will turn transparent. This way you will never lose track of your character or character sprites.
+
+I did not write this script, and although I have tested its compatibility with a variety of scripts myself, I can not state that this script will be compatible with every script out in the community, and I assume no responsibility for any compatibility issues.
+
+==========Terms of Use============
+All resources in this bundle are free to use in commercial and non-commercial projects. You are prohibited from freely distributing any of the resources in part or in whole, and you are also prohibited from selling any of these resources, including edited versions. They are for use in projects only.
+
+
+
+
+If you have any questions, comments, concerns, or requests for future products, please visit our website:
+
+www.pioneervalleygames.com
+
+Or stop by our Facebook page and say Hi!
+
+http://www.facebook.com/PioneerValleyGames
+
+
+Thank you kindly,
+-Jesse and Megan
