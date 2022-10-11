@@ -8,6 +8,10 @@ public class BuildingInteract : MonoBehaviour
     // Start is called before the first frame update
     [Header("Events")]
     public GameEvent onBuildingInteract;
+    private void Awake()
+    {
+        
+    }
 
     private void OnBuildingInteracted()
     {

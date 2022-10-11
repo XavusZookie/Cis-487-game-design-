@@ -21,8 +21,6 @@ public class BuildingController : MonoBehaviour
         {
             Debug.Log("you're interacting with building #" + id);
         }
-
-
     }
     private void OnBuildingExit(int id)
     {
