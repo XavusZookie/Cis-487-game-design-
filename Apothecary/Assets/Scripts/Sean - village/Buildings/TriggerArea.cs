@@ -7,10 +7,13 @@ public class TriggerArea : MonoBehaviour
     public int id;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameEvents.current.BuildingTriggerEnter(id);
+        
+        if(collision.gameObject.CompareTag("Player"))
+            GameEvents.current.BuildingTriggerEnter(id);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        GameEvents.current.BuildingTriggerExit(id);
+        if(collision.gameObject.CompareTag("Player"))
+            GameEvents.current.BuildingTriggerExit(id);
     }
 }

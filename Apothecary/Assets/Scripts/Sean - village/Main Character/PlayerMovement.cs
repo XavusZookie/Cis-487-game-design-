@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
-    //public InputAction playerControls;
     public Apothecary playerControls;
 
     Vector2 moveDirection = Vector2.zero;

@@ -8,7 +8,8 @@ public class GameEventListener : MonoBehaviour
     // Start is called before the first frame update
     public GameEvent gameEvent;
 
-    public UnityEvent Response;
+    public UnityEvent response;
+    //allows you to link method calls directly in the editor
 
     private void OnEnable()
     {
@@ -20,6 +21,6 @@ public class GameEventListener : MonoBehaviour
     }
     public void OnEventRaised()//Called by the game event when an event is broadcast
     {
-        Response.Invoke();
+        response.Invoke();
     }
 }

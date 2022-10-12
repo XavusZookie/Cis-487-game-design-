@@ -44,4 +44,18 @@ public class GameEvents : MonoBehaviour
             onNPCTriggerExit(id);
         }
     }
+
+    public event Action<int> onPortalTriggerEnter;
+    public void PortalTriggerEnter(int id)
+    {
+        if (onPortalTriggerEnter != null)
+            onPortalTriggerEnter(id);
+    }
+
+    public event Action<int> onPortalTriggerExit;
+    public void PortalTriggerExit(int id)
+    {
+        if (onPortalTriggerExit != null)
+            onPortalTriggerExit(id);
+    }
 }

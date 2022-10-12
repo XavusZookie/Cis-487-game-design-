@@ -8,9 +8,7 @@ public class BuildingController : MonoBehaviour
     public int id;
     private void Start()
     {
-        //
         GameEvents.current.onBuildingTriggerEnter += OnBuildingInteracted;
-        //
         GameEvents.current.onBuildingTriggerExit += OnBuildingExit;
     }
 

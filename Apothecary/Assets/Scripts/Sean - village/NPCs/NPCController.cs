@@ -16,9 +16,7 @@ public class NPCController : MonoBehaviour
     }
     private void Start()
     {
-        //
-        //GameEvents.current.onNPCTriggerEnter += OnNPCInteracted;
-        //
+        GameEvents.current.onNPCTriggerEnter += OnNPCInteracted;
         GameEvents.current.onNPCTriggerExit += OnNPCExit;
     }
     private void OnNPCInteracted(int id)
@@ -37,7 +35,6 @@ public class NPCController : MonoBehaviour
             visualCue.SetActive(false);
             Debug.Log("you've stopped talking with NPC" + id);
         }
-        // Update is called once per frame
     }
 
     private void OnDestroy()
