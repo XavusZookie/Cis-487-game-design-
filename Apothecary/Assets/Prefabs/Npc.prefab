@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 8911404005965987511}
   - component: {fileID: 7618099494494130211}
   - component: {fileID: 1991832777768080204}
+  - component: {fileID: 6895234418179154396}
   m_Layer: 0
   m_Name: Npc
   m_TagString: Untagged
@@ -385,6 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  poop: 0
 --- !u!114 &7618099494494130211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +419,46 @@ MonoBehaviour:
       - m_Target: {fileID: 7618099494494130211}
         m_TargetAssemblyTypeName: DialogueBubble, Assembly-CSharp
         m_MethodName: SpeechBubbleVisible
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8911404005965987511}
+        m_TargetAssemblyTypeName: NPCtalky, Assembly-CSharp
+        m_MethodName: inRangeSet
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6895234418179154396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985380232696966011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd68c0e6a7c28146ab1ad9e8054be14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: ede04665bd769af42af80067a74ab2bd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8911404005965987511}
+        m_TargetAssemblyTypeName: NPCtalky, Assembly-CSharp
+        m_MethodName: talkToMe
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -51,6 +51,5 @@ public class PlayerMovement : MonoBehaviour
     private void Interact(InputAction.CallbackContext context)
     {
         onPlayerInteract.Raise(this,context.ReadValueAsButton());
-        Debug.Log("We interacted with an object");
     }
 }
