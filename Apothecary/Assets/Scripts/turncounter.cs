@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 
 public class turncounter : MonoBehaviour
@@ -71,6 +71,7 @@ public class turncounter : MonoBehaviour
             }
         }
 
+       
 
     }
 
@@ -85,7 +86,11 @@ public class turncounter : MonoBehaviour
             ourturn=true;
         }
 
-
+        if (battlefinished)
+        {
+            
+            SceneManager.LoadScene(1);
+        }
 
     }
 
