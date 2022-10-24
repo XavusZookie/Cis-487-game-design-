@@ -11,6 +11,10 @@ public static class GameManager
     public static int greenherb = 0;
     public static int blueherb = 0;
     public static int redherb = 0;
+    public static float damagerange = 5;
+    public static float damagevariance = 2;
 
+
+    public static int level = 0;
 
 }
