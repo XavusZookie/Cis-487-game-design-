@@ -24,7 +24,6 @@ public class healthdisplay : MonoBehaviour
     void Update()
     {
         health.text = GameManager.currenthealth + "/" + GameManager.maxhealth + "   " + GameManager.currentstamina + "/" + GameManager.maxstamina + "\nHealth   Stamina";
-        enemyhealth.text = enemyhealthcurrent + "/" + enemyhealthmax;
         herbs.text = "Green herbs: "+ GameManager.greenherb + " Blue herbs: " + GameManager.blueherb + " Red herbs: " + GameManager.redherb;
 
     }
