@@ -92,6 +92,12 @@ public class turncounter : MonoBehaviour
 
     public void lunge()
     {
+        if (battlefinished && GameManager.currenthealth <= 0)
+        {
+        resetmanager();
+            SceneManager.LoadScene(0);
+    
+        }
 
         if (ourturn && GameManager.currentstamina >= 3)
         {
@@ -130,6 +136,16 @@ public class turncounter : MonoBehaviour
     public void opponentturn()
     {
 
+        if (battlefinished && GameManager.currenthealth > 0)
+        {
+            GameManager.currentstamina = GameManager.maxstamina;
+            SceneManager.LoadScene(1);
+        }
+        else if(battlefinished)
+        {
+            resetmanager();
+            SceneManager.LoadScene(0);
+        }
 
         if (!ourturn && enemy1.activeSelf == true )
         {
@@ -158,19 +174,47 @@ public class turncounter : MonoBehaviour
 
         }
 
- ourturn = true;
 
-
-        if (battlefinished)
+        if (GameManager.currenthealth <= 0)
         {
-            
-            SceneManager.LoadScene(1);
+
+            lostgame();
         }
+        ourturn = true;
+
+
+
 
     }
 
+    public void lostgame()
+    {
+        battlefinished = true;
+        banner.text = "You Lost!";
+    }
+
+    public void resetmanager()
+    {
+            GameManager.maxhealth = 50;
+        GameManager.currenthealth = 50;
+        GameManager.maxstamina = 50;
+        GameManager.currentstamina = 50;
+        GameManager.greenherb = 0;
+        GameManager.blueherb = 0;
+        GameManager.redherb = 0;
+        GameManager.damagerange = 5;
+        GameManager.damagevariance = 2;
+        GameManager.level = 0;
+}
+
     public void slash()
     {
+        if (battlefinished && GameManager.currenthealth <= 0)
+        {
+            resetmanager();
+            SceneManager.LoadScene(0);
+      
+        }
 
         if (ourturn && GameManager.currentstamina >= 5)
         {
