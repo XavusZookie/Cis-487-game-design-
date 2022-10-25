@@ -25,8 +25,7 @@ public class DialogueBubble : MonoBehaviour
     }
     public void SpeechBubbleVisible(Component sender, object data)
     {
-        Debug.Log(data);
-        if ((int)data >= 0 && ((int)data == this.npcBase.Id))
+        if ((int)data == npcBase.Id)
         {
             
             visualCue.SetActive(true);

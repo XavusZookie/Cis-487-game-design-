@@ -6,27 +6,24 @@ public class NPCDialogue : MonoBehaviour
 {
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
-    //NPCBase npcBase;
-    //[SerializeField] GameObject npc;
-    private bool check;
+    NPCBase npcBase;
+    [SerializeField] GameObject npc;
+    private int id;
     private void Awake()
     {
-        check = false;
-        //npcBase = npc.GetComponent<NPCBase>();
+        npcBase = npc.GetComponent<NPCBase>();
+        id = -1111;
     }
     public void talkToMe(Component sender, object data)
     {
-        if (data.Equals(true) && check==true)
+        if (data.Equals(true) && npcBase.Id == this.id)
         {
-            Debug.Log("Great success! Your NPC should be able to talk to you now");
+            Debug.Log(inkJSON.text);
         }
     }
-    public void inRangeSet(Component sender, object data)
+    public void giveMeId(Component sender, object data)
     {
-        if (data.Equals(true))
-            check = true;
-        else
-            check = false;
-
+        id = (int)data;
     }
+
 }

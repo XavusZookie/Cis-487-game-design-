@@ -457,6 +457,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2994214119734621676, guid: 73cd47c9931ca16428cd880def6ac681, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 727a6ab858b3c0148b861eeb35a8e891, type: 3}
+    - target: {fileID: 5308410902281278011, guid: 73cd47c9931ca16428cd880def6ac681, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38394976
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308410902281278011, guid: 73cd47c9931ca16428cd880def6ac681, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308410902281278011, guid: 73cd47c9931ca16428cd880def6ac681, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5308410903020560416, guid: 73cd47c9931ca16428cd880def6ac681, type: 3}
       propertyPath: m_Name
       value: Npc (new event sys)
