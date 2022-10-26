@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d906a49a8a48dfd4d827645e7a01c440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPlayerInteract: {fileID: 11400000, guid: ede04665bd769af42af80067a74ab2bd, type: 2}
   moveSpeed: 5
   rb: {fileID: 8611750620959244236}
 --- !u!114 &8611750620959244227
