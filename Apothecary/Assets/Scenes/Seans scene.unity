@@ -194,6 +194,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &383611140
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +263,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 33b9919 (uhiuui)
 --- !u!1001 &503629876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -532,6 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e920f71d63ef4624ba6d6a7f1c25e5d0, type: 3}
+<<<<<<< HEAD
 --- !u!1 &875817408
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +639,10 @@ RectTransform:
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &954391198
 GameObject:
+=======
+--- !u!1001 &979991064
+PrefabInstance:
+>>>>>>> parent of 33b9919 (uhiuui)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -773,6 +781,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8611750620959244226, guid: c62bd10b83791c3419728a082b6a11c1, type: 3}
   m_PrefabInstance: {fileID: 1825355924}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1425749243
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +859,9 @@ CanvasRenderer:
   m_GameObject: {fileID: 1425749243}
   m_CullTransparentMesh: 1
 --- !u!1001 &1463934568
+=======
+--- !u!1001 &1514108792
+>>>>>>> parent of 33b9919 (uhiuui)
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
