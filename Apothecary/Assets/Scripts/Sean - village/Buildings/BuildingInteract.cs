@@ -10,6 +10,20 @@ public class BuildingInteract : MonoBehaviour
     public GameEvent onBuildingInteract;
     private void Awake()
     {
-
+        
     }
+
+    private void OnBuildingInteracted()
+    {
+        //if(id == this.id)
+        //{
+        onBuildingInteract.Raise();     
+        Debug.Log("you are interacting with a building");
+        //}
+    }
+
+
+
+
+
 }

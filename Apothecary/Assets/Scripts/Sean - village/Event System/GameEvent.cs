@@ -10,27 +10,12 @@ public class GameEvent : ScriptableObject
     //Raise event through different methods signatures
     public void Raise()
     {
-        Raise(null, null);
-    }
-
-    public void Raise(object data)
-    {
-        Raise(null, data);
-    }
-
-    public void Raise(Component sender)
-    {
-        Raise(sender, null);
-    }
-    public void Raise(Component sender, object data)
-    {
-        for (int i = listeners.Count - 1; i >= 0; i--)
-        //for (int i =0; i< listeners.Count; i++)
+        //for (int i = listeners.Count - 1; i >= 0; i--)
+        for (int i =0; i< listeners.Count; i++)
         {
-            listeners[i].OnEventRaised(sender, data);
+            listeners[i].OnEventRaised();
         }
     }//manager listeners
-
     public void RegisterListener(GameEventListener listener)
     {
         if (!listeners.Contains(listener))
