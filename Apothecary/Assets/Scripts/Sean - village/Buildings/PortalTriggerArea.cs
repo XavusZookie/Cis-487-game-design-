@@ -9,10 +9,7 @@ public class PortalTriggerArea : MonoBehaviour
     {
 
         if (collision.gameObject.CompareTag("Player"))
-        {
             GameEvents.current.PortalTriggerEnter(id);
-            GameManager.level++;
-        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

@@ -19,21 +19,6 @@ public class BuildingController : MonoBehaviour
         {
             Debug.Log("you're interacting with building #" + id);
         }
-
-        if (this.id == 2 && this.id == id)
-        {
-            if (Input.GetKeyDown("space"))
-            {
-                print("space key was pressed");
-            }
-            if (GameManager.redherb == 1)
-            {
-                GameManager.redherb--;
-                GameManager.damagerange++;
-
-            }
-            
-        }
     }
     private void OnBuildingExit(int id)
     {
