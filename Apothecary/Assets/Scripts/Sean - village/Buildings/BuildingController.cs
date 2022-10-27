@@ -6,6 +6,9 @@ public class BuildingController : MonoBehaviour
 {
     // Start is called before the first frame update
     public int id;
+    public bool blacksmith = false;
+    public GameObject blacksmithUI;
+
     private void Start()
     {
         GameEvents.current.onBuildingTriggerEnter += OnBuildingInteracted;
@@ -20,20 +23,28 @@ public class BuildingController : MonoBehaviour
             Debug.Log("you're interacting with building #" + id);
         }
 
-        if (this.id == 2 && this.id == id)
+        if (this.id == 2 && this.id == id && blacksmith==false)
         {
-            if (Input.GetKeyDown("space"))
-            {
-                print("space key was pressed");
-            }
-            if (GameManager.redherb == 1)
-            {
-                GameManager.redherb--;
-                GameManager.damagerange++;
+            Time.timeScale = 0;
 
-            }
+            blacksmithUI.SetActive(true);
             
         }
+
+        if (this.id == 3 && this.id == id)
+        {
+          
+            if (GameManager.blueherb == 1)
+            {
+                GameManager.blueherb--;
+                GameManager.currenthealth+= 10;
+                GameManager.maxhealth += 10;
+                
+
+            }
+
+        }
+
     }
     private void OnBuildingExit(int id)
     {
