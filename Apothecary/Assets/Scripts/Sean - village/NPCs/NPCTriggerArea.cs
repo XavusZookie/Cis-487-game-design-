@@ -18,12 +18,12 @@ public class NPCTriggerArea : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
             //GameEvents.current.NPCTriggerEnter(id);        
-            onNPCinRange.Raise(npcBase.Id);
+            onNPCinRange.Raise(this, npcBase.Id);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
             //GameEvents.current.NPCTriggerExit(id);
-            onNPCinRange.Raise(-99);
+            onNPCinRange.Raise(this, -99);
     }
 }

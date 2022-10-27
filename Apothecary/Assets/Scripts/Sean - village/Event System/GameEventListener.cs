@@ -9,8 +9,10 @@ public class GameEventListener : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameEvent gameEvent;
-    [Tooltip("Response to invoke when Event with GameData is raised.")]
     public CustomGameEvent response;
+
+    //public UnityEvent response;
+    //allows you to link method calls directly in the editor
 
     private void OnEnable()
     {

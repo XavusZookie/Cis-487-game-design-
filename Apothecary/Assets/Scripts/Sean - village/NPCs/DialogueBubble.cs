@@ -26,7 +26,8 @@ public class DialogueBubble : MonoBehaviour
     public void SpeechBubbleVisible(Component sender, object data)
     {
         if ((int)data == npcBase.Id)
-        {    
+        {
+            
             visualCue.SetActive(true);
             animator.Play(BUBBLE_PLAY);
         }

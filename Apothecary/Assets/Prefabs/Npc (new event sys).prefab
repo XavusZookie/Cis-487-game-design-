@@ -160,17 +160,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5308410903020560416}
     - target: {fileID: 8911404005965987511, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
-      propertyPath: Talking
-      value: 
-      objectReference: {fileID: 11400000, guid: 66048c9a692956544952c774650984fe, type: 2}
-    - target: {fileID: 8911404005965987511, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: 727a6ab858b3c0148b861eeb35a8e891, type: 3}
-    - target: {fileID: 8911404005965987511, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
-      propertyPath: talking
-      value: 
-      objectReference: {fileID: 11400000, guid: 66048c9a692956544952c774650984fe, type: 2}
     - target: {fileID: 8911404005965987511, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
       propertyPath: <Id>k__BackingField
       value: 0

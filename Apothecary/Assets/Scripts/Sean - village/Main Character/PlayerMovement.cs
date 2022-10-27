@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         fire = playerControls.Player.Fire;
         fire.Enable();
         fire.performed += Interact;
-
     }
     private void OnDisable()
     {
