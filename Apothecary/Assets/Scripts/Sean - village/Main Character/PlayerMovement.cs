@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Header("Events")]
+    public GameEvent onPlayerInteract;
+
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Apothecary playerControls;
@@ -47,6 +50,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Interact(InputAction.CallbackContext context)
     {
-        Debug.Log("We interacted with an object");
+        onPlayerInteract.Raise(this, context.ReadValueAsButton());
     }
 }

@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class CustomGameEvent : UnityEvent<Component, object> { }
 public class GameEventListener : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Tooltip("Event to register with.")]
     public GameEvent gameEvent;
 
-    public UnityEvent response;
+    [Tooltip("Response to invoke when Event with GameData is raised.")]
+    public CustomGameEvent response;
+
+    //public UnityEvent response;
     //allows you to link method calls directly in the editor
 
     private void OnEnable()
@@ -19,8 +24,8 @@ public class GameEventListener : MonoBehaviour
     {
         gameEvent.UnregisterListener(this);
     }
-    public void OnEventRaised()//Called by the game event when an event is broadcast
+    public void OnEventRaised(Component sender, object data)//Called by the game event when an event is broadcast
     {
-        response.Invoke();
+        response.Invoke(sender, data);
     }
 }
