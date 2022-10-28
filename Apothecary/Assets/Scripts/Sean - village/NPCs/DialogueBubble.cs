@@ -13,7 +13,6 @@ public class DialogueBubble : MonoBehaviour
     private string currentAnimation;
     //Animation States
     const string BUBBLE_PLAY = "bubble_play";
-    const string BUBBLE_PAUSE = "bubble_pause";
     private void Awake()
     {
         visualCue.SetActive(false);

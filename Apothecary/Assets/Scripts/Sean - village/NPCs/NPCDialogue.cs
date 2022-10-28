@@ -8,6 +8,9 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
     NPCBase npcBase;
     [SerializeField] GameObject npc;
+    [Header("Events")]
+    public GameEvent talking;
+
     private int id;
     private void Awake()
     {
@@ -16,14 +19,16 @@ public class NPCDialogue : MonoBehaviour
     }
     public void talkToMe(Component sender, object data)
     {
-        if (data.Equals(true) && npcBase.Id == this.id)
+        if (data.Equals(true) && npcBase.Id == id)
         {
-            Debug.Log(inkJSON.text);
+            talking.Raise(npcBase, inkJSON);
+            //id++;
         }
     }
     public void giveMeId(Component sender, object data)
     {
         id = (int)data;
+        Debug.Log(id);
     }
 
 }

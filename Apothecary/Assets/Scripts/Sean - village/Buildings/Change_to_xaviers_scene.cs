@@ -16,7 +16,7 @@ public class Change_to_xaviers_scene : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("hi");
-            fightStart.Raise();
+            //fightStart.Raise();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

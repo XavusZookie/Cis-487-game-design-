@@ -409,6 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 727a6ab858b3c0148b861eeb35a8e891, type: 3}
   npc: {fileID: 1985380232696966011}
+  talking: {fileID: 11400000, guid: 3d0f1cdad890e4e40b46e5f97b9e01b6, type: 2}
 --- !u!114 &2259084947551734193
 MonoBehaviour:
   m_ObjectHideFlags: 0

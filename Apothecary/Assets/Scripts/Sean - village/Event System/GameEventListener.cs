@@ -18,11 +18,11 @@ public class GameEventListener : MonoBehaviour
 
     private void OnEnable()
     {
-        gameEvent.RegisterListener(this);
+        gameEvent.Register(this);
     }
     private void OnDisable()
     {
-        gameEvent.UnregisterListener(this);
+        gameEvent.Deregister(this);
     }
     public void OnEventRaised(Component sender, object data)//Called by the game event when an event is broadcast
     {

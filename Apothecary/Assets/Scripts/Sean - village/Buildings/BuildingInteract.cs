@@ -17,7 +17,7 @@ public class BuildingInteract : MonoBehaviour
     {
         //if(id == this.id)
         //{
-        onBuildingInteract.Raise();     
+        //onBuildingInteract.Raise();     
         Debug.Log("you are interacting with a building");
         //}
     }

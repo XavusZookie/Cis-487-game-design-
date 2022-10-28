@@ -12,25 +12,17 @@ public class DialoguePanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI char_name;
     private Story currentStory;
     private bool dialogueIsPlaying;
+    private TextAsset inkJSON;
 
     void Start()
     {
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
     }
-    private void Update()
+    //public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(Component sender, object data)
     {
-        if (!dialogueIsPlaying)
-        {
-            return;
-        }
-        int i = 0;
-        if(i == 0){//submit button pressed replace with good code later
-            ContinueStory();
-        }
-    }
-    public void EnterDialogueMode(TextAsset inkJSON)
-    {
+        inkJSON = data as TextAsset;
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
@@ -49,11 +41,17 @@ public class DialoguePanel : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
+            Debug.Log("hello");
             dialogueText.text = currentStory.Continue();
         }
         else
         {
             ExitDialogueMode();
         }
+    }
+
+    public void _continue_story()
+    {
+        ContinueStory();
     }
 }
