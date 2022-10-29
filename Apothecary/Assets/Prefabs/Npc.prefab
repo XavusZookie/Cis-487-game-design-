@@ -395,6 +395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 0
+  <Name>k__BackingField: Sasha
+  <CharImage>k__BackingField: {fileID: 0}
 --- !u!114 &72410300653829589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +485,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 72410300653829589}
         m_TargetAssemblyTypeName: NPCDialogue, Assembly-CSharp
-        m_MethodName: talkToMe
+        m_MethodName: sendText
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

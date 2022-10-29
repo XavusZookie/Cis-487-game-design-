@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Ink.Runtime;
+
+//purpose is just for displaying text
 public class DialoguePanel : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -10,48 +12,36 @@ public class DialoguePanel : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI char_name;
-    private Story currentStory;
-    private bool dialogueIsPlaying;
-    private TextAsset inkJSON;
+    [SerializeField] private GameObject char_img_window;
+    private Sprite char_image;
+    private object[] array = new object[3];
 
     void Start()
     {
-        dialogueIsPlaying = false;
+        char_image = char_img_window.GetComponent<Sprite>();
         dialoguePanel.SetActive(false);
     }
-    //public void EnterDialogueMode(TextAsset inkJSON)
+    
     public void EnterDialogueMode(Component sender, object data)
     {
-        inkJSON = data as TextAsset;
-        currentStory = new Story(inkJSON.text);
-        dialogueIsPlaying = true;
-        dialoguePanel.SetActive(true);
-        ContinueStory();
-
-    }
-    private void ExitDialogueMode()
-    {
-        dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
-        dialogueText.text = "";
-
-    }
-
-    private void ContinueStory()
-    {
-        if (currentStory.canContinue)
+        array = (object[])data;
+        if ((string)array[2] != null)
+        //if ((string)data != null)
         {
-            Debug.Log("hello");
-            dialogueText.text = currentStory.Continue();
+            dialoguePanel.SetActive(true);
+            char_image = (Sprite)array[0];
+            char_name.text = array[1].ToString();
+            dialogueText.text = array[2].ToString();
+            //dialogueText.text = (string)data;
         }
         else
         {
             ExitDialogueMode();
         }
     }
-
-    public void _continue_story()
+    private void ExitDialogueMode()
     {
-        ContinueStory();
+        dialoguePanel.SetActive(false);
+        dialogueText.text = "";
     }
 }

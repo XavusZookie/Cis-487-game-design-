@@ -7,6 +7,18 @@ public class NPCBase : MonoBehaviour
     // Start is called before the first frame update
     [field: SerializeField]
     public int Id { get; private set;}
+    [field: SerializeField]
+    public string Name { get; private set;}
+    [field: SerializeField]
+    public Sprite CharImage { get; private set;}
+
+
+
+    void Start()
+    {
+        CharImage = GetComponent<Sprite>();
+    }
+    
     //public GameEvent onNPCinRange;
     //private void Start()
     //{

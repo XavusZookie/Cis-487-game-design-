@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: <Id>k__BackingField
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 607667176796347459, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
+      propertyPath: <CharImage>k__BackingField
+      value: 
+      objectReference: {fileID: -450754627, guid: ca8af55e11eb1f244970b773805acba7, type: 3}
     - target: {fileID: 1985380232696966009, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -442,7 +446,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f8acf666998f52a4882ea829e5e14de5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -596,6 +600,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1006652464}
   dialogueText: {fileID: 1666938747}
   char_name: {fileID: 1482140239}
+  char_img_window: {fileID: 778953045}
 --- !u!1 &1163882095
 GameObject:
   m_ObjectHideFlags: 3
@@ -897,6 +902,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 607667176796347459, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
+      propertyPath: <Name>k__BackingField
+      value: Jerry
+      objectReference: {fileID: 0}
+    - target: {fileID: 607667176796347459, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
+      propertyPath: <CharImage>k__BackingField
+      value: 
+      objectReference: {fileID: -450754627, guid: ca8af55e11eb1f244970b773805acba7, type: 3}
     - target: {fileID: 1985380232696966009, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -947,7 +960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7209272047633915477, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f01d2fc1820ff14a9f18b1b4225452f, type: 3}
