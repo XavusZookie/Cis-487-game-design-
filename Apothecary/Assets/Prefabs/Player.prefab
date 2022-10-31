@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPlayerInteract: {fileID: 11400000, guid: ede04665bd769af42af80067a74ab2bd, type: 2}
+  on_l_click: {fileID: 11400000, guid: fdc26576fbf1ad741906d0da2a5dc89c, type: 2}
   moveSpeed: 5
   rb: {fileID: 8611750620959244236}
 --- !u!114 &8611750620959244227
