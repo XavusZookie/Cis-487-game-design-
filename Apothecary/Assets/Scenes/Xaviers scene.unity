@@ -2015,8 +2015,9 @@ GameObject:
   - component: {fileID: 1058462722}
   - component: {fileID: 1058462721}
   - component: {fileID: 1058462720}
+  - component: {fileID: 1058462723}
   m_Layer: 5
-  m_Name: 'other attack '
+  m_Name: healing potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2086,7 +2087,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1058462721}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 910000709}
+        m_TargetAssemblyTypeName: turncounter, Assembly-CSharp
+        m_MethodName: drinkpotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1058462721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,6 +2138,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058462718}
   m_CullTransparentMesh: 1
+--- !u!114 &1058462723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058462718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93717ba60f0ea347b1a3a3378057767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 1
+  name: Drink a Potion
+  words: {fileID: 1015167190}
 --- !u!1 &1061325221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,8 +2165,9 @@ GameObject:
   - component: {fileID: 1061325225}
   - component: {fileID: 1061325224}
   - component: {fileID: 1061325223}
+  - component: {fileID: 1061325226}
   m_Layer: 5
-  m_Name: 'other attack '
+  m_Name: stamina food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2208,7 +2237,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1061325224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 910000709}
+        m_TargetAssemblyTypeName: turncounter, Assembly-CSharp
+        m_MethodName: eatmeal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1061325224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,6 +2288,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061325221}
   m_CullTransparentMesh: 1
+--- !u!114 &1061325226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061325221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93717ba60f0ea347b1a3a3378057767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 2
+  name: Eat a Meal
+  words: {fileID: 1261418729}
 --- !u!1 &1180116558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,8 +2570,9 @@ GameObject:
   - component: {fileID: 1246313421}
   - component: {fileID: 1246313420}
   - component: {fileID: 1246313419}
+  - component: {fileID: 1246313422}
   m_Layer: 5
-  m_Name: 'other attack '
+  m_Name: fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2585,7 +2642,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1246313420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 910000709}
+        m_TargetAssemblyTypeName: turncounter, Assembly-CSharp
+        m_MethodName: fireball
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1246313420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2624,6 +2693,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246313417}
   m_CullTransparentMesh: 1
+--- !u!114 &1246313422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246313417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93717ba60f0ea347b1a3a3378057767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 3
+  name: Cast Fireball
+  words: {fileID: 1668027886}
 --- !u!1 &1261418727
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,8 +3847,9 @@ GameObject:
   - component: {fileID: 2089881866}
   - component: {fileID: 2089881865}
   - component: {fileID: 2089881864}
+  - component: {fileID: 2089881867}
   m_Layer: 5
-  m_Name: 'other attack '
+  m_Name: 1000 strike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3834,7 +3919,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2089881865}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 910000709}
+        m_TargetAssemblyTypeName: turncounter, Assembly-CSharp
+        m_MethodName: thousandstrike
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2089881865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3873,6 +3970,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089881862}
   m_CullTransparentMesh: 1
+--- !u!114 &2089881867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089881862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93717ba60f0ea347b1a3a3378057767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 4
+  name: 1000 Fold Strike
+  words: {fileID: 1552661900}
 --- !u!1 &2128160791
 GameObject:
   m_ObjectHideFlags: 0
