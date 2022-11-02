@@ -12,8 +12,6 @@ public class NPCBase : MonoBehaviour
     [field: SerializeField]
     public Sprite CharImage { get; private set;}
 
-
-
     void Start()
     {
         CharImage = GetComponent<Sprite>();

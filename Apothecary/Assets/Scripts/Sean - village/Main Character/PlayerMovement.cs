@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     [Header("Events")]
     public GameEvent onPlayerInteract;
+    public GameEvent onPause;
     public GameEvent on_l_click;
 
     public float moveSpeed = 5f;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private InputAction fire;
     private InputAction ui_l_click;
     private InputAction ui_r_click;
+    private InputAction esc;
 
     private void Awake()
     {
@@ -33,12 +35,19 @@ public class PlayerMovement : MonoBehaviour
         fire.Enable();
         fire.performed += Interact;
 
+        esc = playerControls.UI.Cancel;
+        esc.Enable();
+        esc.performed += Pause;
+
+        
         ui_l_click = playerControls.UI.Click;
         ui_l_click.Enable();
         ui_l_click.performed += l_click;
 
         ui_r_click = playerControls.UI.Click;
         ui_r_click.Enable();
+        
+        
         
     }
     private void OnDisable()
@@ -47,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         fire.Disable();
         ui_l_click.Disable();
         ui_r_click.Disable();
+        esc.Disable();
     }
 
 
@@ -66,6 +76,12 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Interact Called");
         onPlayerInteract.Raise(this, context.ReadValueAsButton());
     }
+
+    private void Pause(InputAction.CallbackContext context)
+    {
+        Debug.Log("I was pressed");
+        onPause.Raise();
+    }
     private void l_click(InputAction.CallbackContext context)
     {
         string d;
@@ -75,7 +91,5 @@ public class PlayerMovement : MonoBehaviour
             d = "released";
         Debug.Log("Left Click " + d);
         on_l_click.Raise(this, context);
-
-        
     }
 }

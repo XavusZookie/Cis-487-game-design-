@@ -32,6 +32,7 @@ public class DialoguePanel : MonoBehaviour
             char_image = (Sprite)array[0];
             char_name.text = array[1].ToString();
             dialogueText.text = array[2].ToString();
+            Time.timeScale = 0f;
             //dialogueText.text = (string)data;
         }
         else
@@ -42,6 +43,7 @@ public class DialoguePanel : MonoBehaviour
     private void ExitDialogueMode()
     {
         dialoguePanel.SetActive(false);
+        Time.timeScale = 1f;
         dialogueText.text = "";
     }
 }
