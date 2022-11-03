@@ -22,13 +22,19 @@ public static class GameManager
 
 
     public static bool healable = false;
+
     public static bool healedthisturn = false;
     public static bool atethisturn = false;
 
     public static bool staminarecoverable = false;
+
     public static bool skilllearned = false;
+
     public static bool spelllearned = false;
 
     public static int level = 0;
+
+    public static int numbercured = 0;
+
 
 }

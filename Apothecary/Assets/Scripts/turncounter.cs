@@ -27,7 +27,8 @@ public class turncounter : MonoBehaviour
     int reward;
     void Start()
     {
-
+        GameManager.healedthisturn = false;
+        GameManager.currenthealth = GameManager.maxhealth;
         Random.seed = System.DateTime.Now.Millisecond;
         banner.text = "Your turn!";
         spawnenemy();
@@ -37,11 +38,11 @@ public class turncounter : MonoBehaviour
 
     public void spawnenemy()
     {
-        if (GameManager.level <= 9)
+        if (GameManager.level <= 5)
         {
             enemy1.SetActive(true);
         }
-        else if (GameManager.level <= 15)
+        else if (GameManager.level <= 8)
         {
             enemy3.SetActive(true);
             enemy2.SetActive(true);
@@ -199,7 +200,7 @@ public class turncounter : MonoBehaviour
         GameManager.damagerange = 5;
         GameManager.damagevariance = 2;
         GameManager.level = 0;
-        GameManager.healamount = 10;
+        GameManager.healedthisturn = false;
         GameManager.staminaamount = 10;
         GameManager.armor = 1;
  
@@ -209,8 +210,11 @@ public class turncounter : MonoBehaviour
         GameManager.skilllearned = false;
         GameManager.spelllearned = false;
 
+        GameManager.herbs = 0;
+        GameManager.numbercured = 0;
 
-}
+
+    }
 
     public void slash()
     {
@@ -291,7 +295,7 @@ public class turncounter : MonoBehaviour
 
             }
 
-            if (ourturn && GameManager.healable && !GameManager.atethisturn)
+            if (ourturn && GameManager.staminarecoverable && !GameManager.atethisturn)
             {
                 banner.text = "Tasted Delicious, Your Stamina Went Up";
                 GameManager.currentstamina += GameManager.staminaamount;
